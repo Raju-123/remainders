@@ -17,10 +17,13 @@ while(True):
 
 if len(data):
     for value in data:
-        remainders.append(value%5)
+            remainders.append(value%5)
 
     for index in range(len(data)):
-        result.append(data[index] / remainders[index])
+        if remainders[index] == 0:
+            result.append(0)
+        else:
+            result.append(data[index] / remainders[index])
 
     print(result)
 else:
